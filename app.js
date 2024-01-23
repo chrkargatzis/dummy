@@ -4,6 +4,9 @@ const bodyParser = require('body-parser');
 const usersRouter = require('./routes/users');
 const { producer, consumer } = require('./kafka.js');
 
+const KAFKA_BROKER = process.env.KAFKA_BROKER || 'kafka:9092';
+
+
 const app = express();
 const PORT = process.env.PORT || 3000;
 
